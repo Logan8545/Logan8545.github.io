@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>	
+<body>
+
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital">Adaptation</span> (Logan Busalacchi, 2022)</h3>
+	
+<div class="sideBySide">
+<img class= "filmStill" onClick="onClick_DTRT_img01()" src="images/1st image.PNG" alt="" width="122" height="147">
+<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/2nd image.PNG" alt="Do the Right Thing">
+<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/3rd image.PNG" alt="Do the Right Thing">
+	</div>	
+	
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga nobis earum, molestiae tenetur, aperiam perspiciatis tempore minus rerum ad blanditiis aliquam iure, quam laudantium eveniet quibusdam voluptas consectetur. Quae commodi omnis nam, sed eum optio adipisci officiis deserunt aliquid expedita nesciunt sunt voluptates modi voluptatum nostrum quod molestiae! Voluptates?</p>
+	
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>	
+	
+</body>
+<script>
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+	
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+	
+var DTRT_text = document.getElementById("DTRT_text");
+	
+	
+// DO THE RIGHT THING SECTION	
+
+	
+var DTRT00 = "This was the adaptation assignment where I would try to adapt a situation that I had previously thought of. It would be about someone that had murdered another person and would look around at different objects which would remind him of what the person he murdered said before they were killed.";
+	
+	
+var DTRT01 = "This image would be where the main character would shelter himself after murdering someone. It was the house that he lived at and would show the story of how the conversation between the person he murdered and him played out until something went wrong and things changed for the worse."	
+	
+DTRT_text.innerHTML = DTRT00;
+	
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = DTRT01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+}	
+
+var DTRT02 = "The Kleenex box would simply be part of the objects that would remind the main character of what the victim said before they died. It is only a bit of the puzzle and not the entire sentence which still makes it important. It would be closer to the beginning of the thought process too."	
+	
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img01_clicked);
+	revealButton();
+}	
+	
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = DTRT03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img01_clicked);
+}	
+	
+var DTRT03 = "This door would be where the main character would walk in. It is one of the first shots that you will see where the main character will walk in breathing heavily and looking pretty stressed. The rest of the film would showcase the main character looking at various objects that remind him of the victim."	
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+
+	function gotoMovie(){
+		window.open("https://youtu.be/dyg0nEY4dvM");
+	}
+
+</script>		
+</html>
